@@ -57,7 +57,7 @@ CREATE TABLE `anamnese` (
   `restric_qual` varchar(30) DEFAULT NULL,
   `objetivo` varchar(100) NOT NULL,
   `id_cliente` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `anamnese`
@@ -84,7 +84,7 @@ CREATE TABLE `cliente` (
   `telefone` varchar(20) NOT NULL,
   `data_cadastro` date NOT NULL,
   `senha` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `cliente`
@@ -96,11 +96,11 @@ INSERT INTO `cliente` (`id`, `nome`, `cpf`, `rg`, `data_nas`, `sexo`, `endereco`
 (21, 'Francisco Iago Igor Campos', '086.751.735-20', '17.221.300-9', '1978-06-20', 'M', 'Rua Heitor Castelo Branco, 42 - Frei Serafim', 'franciscoiagoigorcampos_@gmail.com', '58-98774-7414', '2018-11-18', '123'),
 (22, 'Breno Raul Bernardo Dias', '543.754.446-49', '37.056.808-4', '1984-03-07', 'M', 'Avenida Antônio Francisco de Paula Souza, 481 - Paranapiacaba', 'brenoraulbernardodias_@gmai.com', '35-48744-8878', '2018-11-18', '123'),
 (23, 'Emanuelly Amanda Ferreira', '399.568.329-01', '50.981.706-3', '1992-03-02', 'F', 'Rua Tereza Liberato Ricardo, 395 - Planta Vera Cruz', 'emanuellyamandaferreira@hotmail.com', '35-98923-0784', '2018-11-18', '123'),
-(24, 'Patrí­cia Elaine Farias', '906.817.075-93', '21.696.420-9', '1999-07-07', 'F', 'Rua Pedro Honorato Amorim, 350 - Centro', 'patriciaelainefarias_@outlook.com.br', '36-99881-5316', '2018-11-18', '123'),
+(24, 'Patrícia Elaine Farias', '906.817.075-93', '21.696.420-9', '1999-07-07', 'F', 'Rua Pedro Honorato Amorim, 350 - Centro', 'patriciaelainefarias_@outlook.com.br', '36-99881-5316', '2018-11-18', '123'),
 (25, 'Antônia Analu Campos', '829.791.291-43', '19.906.036-8', '2000-01-05', 'F', 'Rua do Jasmim, 742 - Colonial', 'antoniaanalucampos..antoniaanalucampos@gmail.br', '35-99929-1429', '2018-11-18', '123'),
-(26, 'Eloá Melissa Laí­s Gomes', '410.037.604-90', '28.125.072-8', '2001-01-01', 'F', 'Rua São Crispim, 024 - Porto Das Antas', 'eloamelissalaisgomes@gmail.com', '35-99256-2027', '2018-11-18', '123'),
+(26, 'Eloá Melissa Laís Gomes', '410.037.604-90', '28.125.072-8', '2001-01-01', 'F', 'Rua São Crispim, 024 - Porto Das Antas', 'eloamelissalaisgomes@gmail.com', '35-99256-2027', '2018-11-18', '123'),
 (28, 'Fernanda Beatriz Campos', '291.865.390-00', '32.847.796-5', '1980-09-08', 'F', 'Avenida Uruguai, 505 - Santa Rosa', 'fernandabeatrizcamposs@outlook.com.br', '35-98642-4689', '2018-11-18', '123'),
-(29, 'Stefany Catarina Alí­cia Jesus', '234.428.009-00', '11.560.636-1', '2002-12-07', 'F', 'Vila Carminda Pessoa, 158 - Henrique Jorge', 'stefanycatarinaaliciajesus.s@gmail.com', '35-99457-9235', '2018-11-18', '123'),
+(29, 'Stefany Catarina Alícia Jesus', '234.428.009-00', '11.560.636-1', '2002-12-07', 'F', 'Vila Carminda Pessoa, 158 - Henrique Jorge', 'stefanycatarinaaliciajesus.s@gmail.com', '35-99457-9235', '2018-11-18', '123'),
 (30, 'Vicente Roberto Porto', '508.837.351-13', '16.690.350-4', '1997-12-12', 'M', 'Rua Antônio Pinheiro Galvão, 251 - Buritis', 'vicenterobertoporto-78@gmail.br', '98-54795-3332', '2018-11-18', '123'),
 (34, 'Jennie', '123.456.789-85', '97.854.621-4', '1995-02-10', 'F', 'Jardim Azul, 485 - Centro', 'jenniexxx@gmail.com', '48-41841-8484', '2018-11-18', '123');
 
@@ -119,7 +119,7 @@ CREATE TABLE `ficha` (
   `carga` float DEFAULT NULL,
   `id_professor` int(11) NOT NULL,
   `bloco` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `ficha`
@@ -145,7 +145,7 @@ CREATE TABLE `login` (
   `cpf` varchar(14) NOT NULL,
   `senha` varchar(16) NOT NULL,
   `privilegio` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `login`
@@ -181,7 +181,7 @@ CREATE TABLE `mensalidade` (
   `data` date NOT NULL,
   `valor` float NOT NULL,
   `id_cliente` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `mensalidade`
@@ -211,7 +211,7 @@ CREATE TABLE `professor` (
   `email` varchar(50) NOT NULL,
   `telefone` varchar(20) NOT NULL,
   `senha` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB CHARSET=utf8mb4 COLLATE utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `professor`
