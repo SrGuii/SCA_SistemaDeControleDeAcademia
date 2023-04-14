@@ -3,7 +3,7 @@
 
 <head>
 
-	<title> SCA by: Gui Inacio </title>
+	<title> SCA by: Gui Inacio</title>
 	<meta charset="utf-8">
 	<link rel="icon" type="imagem/png" href="img/logo.png" />
 
@@ -197,24 +197,41 @@
 		</div>
 		</div></div></div>
 	
-	
+		
 		<!---------------------------- SCRIPT CARROCEL ---------------------------->
 		<script src="jquery/dist/jquery.js"></script>
         <script src="popper.js/dist/popper.min.js"></script>
         <script src="js/bootstrap.js"></script>
-	
+		
 		<!---------------------------- SCRIPT NAVBAR ---------------------------->
-	<br/>
-	<script>
-		function myFunction() {
-		var x = document.getElementById("myTopnav");
-		if (x.className === "topnav") {
-        x.className += " responsive";
-			} else {
-        x.className = "topnav";
-		   }
-		}
-	</script>
+		<br/>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
+		<!--Botão para voltar ao topo da página-->
+		<a id="btnTop" >&#9650;</a>
+		<script>
+			const btnTop = document.getElementById("btnTop");
+			document.getElementById("btnTop").addEventListener("click", function(){
+				window.scrollTo({top:0, behavior: 'smooth'});
+			});
+			window.addEventListener("scroll", function(){	
+				if(window.pageYOffset > 500){
+					btnTop.style.display = "block";
+				
+				} else {
+					btnTop.style.display = "none";
+				}
+			});
+
+		</script>
 
 		<!---------------------------- FOOTER ---------------------------->	
 	<div class="footer">

@@ -57,11 +57,11 @@ label, h2 {
 				</a>
 			<?php
 			if(isset($_SESSION['adm'])){
-				echo"<a href='indexAdm.php' class='active'>Home</a>			
+				echo"<a href='indexAdm.php' >Home</a>			
 			<a href='buscar.php'>Gerenciar alunos</a>
 			<a href='busca_prof.php'>Gerenciar professores</a>			
 			<a href='inadimplentes.php'>Alunos inadimplentes</a>
-			<a href='pagamento.php'>Pagamentos</a>
+			<a href='pagamento.php' class='active'>Pagamentos</a>
 			<a href='cadAluno.php'>Cadastrar aluno</a>
 			<a href='cadProf.php'>Cadastrar professor</a>
 			<a href='sair.php'><img src='img/sair_icon.png' alt='Academia' width='25'> Sair</a>
@@ -70,10 +70,10 @@ label, h2 {
 			</a>";
 			}
 			if(isset($_SESSION['prof'])){
-				echo"<a href='indexProf.php' class='active'>Home</a>			
+				echo"<a href='indexProf.php' >Home</a>			
 			<a href='buscar.php'>Gerenciar alunos</a>									
 			<a href='inadimplentes.php'>Alunos inadimplentes</a>
-			<a href='pagamento.php'>Pagamentos</a>
+			<a href='pagamento.php' class='active'>Pagamentos</a>
 			<a href='cadAluno.php'>Cadastrar aluno</a>
 			<a href='javascript:void(0);' class='icon' onclick='myFunction()'>
 			<img src='img/bars_icon.png' alt='Academia' width='25'>

@@ -240,6 +240,23 @@ if(isset($_SESSION['adm'])){
 		   }
 		}
 	</script>
+	<!--Botão para voltar ao topo da página-->
+	<a id="btnTop" >&#9650;</a>
+		<script>
+			const btnTop = document.getElementById("btnTop");
+			document.getElementById("btnTop").addEventListener("click", function(){
+				window.scrollTo({top:0, behavior: 'smooth'});
+			});
+			window.addEventListener("scroll", function(){	
+				if(window.pageYOffset > 500){
+					btnTop.style.display = "block";
+				
+				} else {
+					btnTop.style.display = "none";
+				}
+			});
+
+		</script>
 
 		<!---------------------------- FOOTER ---------------------------->	
 	<div class="footer">

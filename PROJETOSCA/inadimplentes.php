@@ -50,10 +50,10 @@ label, h2 {
 				</a>
 			<?php
 			if(isset($_SESSION['adm'])){
-				echo"<a href='indexAdm.php' class='active'>Home</a>			
+				echo"<a href='indexAdm.php' >Home</a>			
 			<a href='buscar.php'>Gerenciar alunos</a>
 			<a href='busca_prof.php'>Gerenciar professores</a>			
-			<a href='inadimplentes.php'>Alunos inadimplentes</a>
+			<a href='inadimplentes.php' class='active'>Alunos inadimplentes</a>
 			<a href='pagamento.php'>Pagamentos</a>
 			<a href='cadAluno.php'>Cadastrar aluno</a>
 			<a href='cadProf.php'>Cadastrar professor</a>
@@ -63,9 +63,9 @@ label, h2 {
 			</a>";
 			}
 			if(isset($_SESSION['prof'])){
-				echo"<a href='indexProf.php' class='active'>Home</a>			
+				echo"<a href='indexProf.php' >Home</a>			
 			<a href='buscar.php'>Gerenciar alunos</a>									
-			<a href='inadimplentes.php'>Alunos inadimplentes</a>
+			<a href='inadimplentes.php' class='active'>Alunos inadimplentes</a>
 			<a href='pagamento.php'>Pagamentos</a>
 			<a href='cadAluno.php'>Cadastrar aluno</a>
 			<a href='javascript:void(0);' class='icon' onclick='myFunction()'>
@@ -156,6 +156,23 @@ $consulta = mysqli_query($con, $sql);
 </tbody>
               </table>            
         </div>
+		<!--Botão para voltar ao topo da página-->
+		<a id="btnTop" >&#9650;</a>
+		<script>
+			const btnTop = document.getElementById("btnTop");
+			document.getElementById("btnTop").addEventListener("click", function(){
+				window.scrollTo({top:0, behavior: 'smooth'});
+			});
+			window.addEventListener("scroll", function(){	
+				if(window.pageYOffset > 500){
+					btnTop.style.display = "block";
+				
+				} else {
+					btnTop.style.display = "none";
+				}
+			});
+
+		</script>
 	</div>
 
 

@@ -103,6 +103,7 @@ body {
    background-color: #423e3e;
    color: white;
    text-align: center;
+
 }
 
 /* ------------ ESTILO CARROCEL ------------ */
@@ -391,4 +392,29 @@ input.btn[type="submit"]:hover {
     .columns {
         width: 100%;
     }
+}
+
+/*-------- Estilo Botao Topo ---------*/
+#btnTop {
+ text-decoration: none;
+ color:white;
+ background-color: #111;
+ font-size: 30px;
+ padding: 15px;
+ padding-top: 5px;
+ padding-bottom: 7px;
+ border-radius: 20%;
+ position: fixed;
+ right: 10px;
+ bottom: 10px;
+ box-shadow: 3px;
+ z-index: 11;
+ cursor: pointer;
+ display: none;
+ opacity: 0.7;
+ transition: opacity 0.2s;
+ 
+}
+a#btnTop:hover{
+  opacity: 1;
 }
