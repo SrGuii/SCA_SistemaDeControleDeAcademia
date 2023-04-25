@@ -7,6 +7,7 @@
     $novoCpf = filter_input(INPUT_POST, 'cpf');
     $novoRg = filter_input(INPUT_POST, 'rg');
     $novoEndereco = filter_input(INPUT_POST, 'endereco');
+    $oldCpf = filter_input(INPUT_POST, 'oldCpf');
 
     //Estabelece a conexão com o mysql
     $hostname = "localhost";
@@ -21,13 +22,24 @@
     $novoCpf = filter_input(INPUT_POST, 'cpf');
     $novoRg = filter_input(INPUT_POST, 'rg'); 
 	$novoEndereco = filter_input(INPUT_POST, 'endereco');
+
    
     if( !$conexao ){
         header("Location:exibe.php?alteracao=false");
         exit;
     }
     //Executa a atualização no banco de dados
-    $sql = "UPDATE cliente SET nome='" . $novoNome . "', cpf='" . $novoCpf ."', rg='" . $novoRg . "',email='" . $novoEmail ."',telefone ='".$novoTel ."',endereco ='".$novoEndereco ."' WHERE id=".$id;
+    $sql = "UPDATE cliente SET nome='" . $novoNome . "', cpf='" . $novoCpf ."', rg='" . $novoRg ."',email='" . $novoEmail ."',telefone ='".$novoTel ."',endereco ='".$novoEndereco ."' WHERE id=".$id;
+    
+    //troca cpf do login se o cpf novo for diferente do antigo
+    if($oldCpf != $novoCpf){
+        $sql2 = "UPDATE `login` SET cpf='" . $novoCpf . "' WHERE cpf='" . $oldCpf . "'";
+     $update = mysqli_query($conexao, $sql2);
+    }
+
+
+
+
     //$sql = "UPDATE cliente SET nome='" . $novoNome . "', email='" . $novoEmail ."',telefone ='".$novoTel . "' WHERE id=".$id;
     $update = mysqli_query($conexao, $sql);
 

@@ -5,6 +5,7 @@
 
 	<title> SCA </title>
 	<link rel="icon" type="imagem/png" href="img/logo.png" />
+	<link rel="stylesheet" href="css/normalize.css" >
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!------- estilo NAVBAR ------->
@@ -38,7 +39,7 @@ function formatar(mascara, documento){
 				<a>
 				  <img src="img/logoNav.png" alt="logo" style="width:20px">
 				</a>
-			<a href="index.html" class="active">Home</a>			
+			<a href="index.html" >Home</a>			
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 				<img src="img/bars_icon.png" alt="Academia" width="25">
 			<div class="topnav" id="iconNav">
@@ -98,7 +99,7 @@ function formatar(mascara, documento){
 	
 	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 	
-	<div class="footer">
+	<div class="footer" style="position:fixed; bottom:0; width:100%;">
 		<p>Sistema para Controle de Academia - 2018 | Project by: Aline, Guilherme e Laura | IM3A</p>
 	</div>
 	

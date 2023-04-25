@@ -33,7 +33,7 @@ $cond = mysqli_query($con,$sql);
 	<!------- estilo NAVBAR --------->
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	<!------- estilo CARROCEL ------->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.css"> 
 	
 	<style type="text/css">
 		A#social:link {text-decoration:none;color:#333;}
@@ -67,7 +67,7 @@ $cond = mysqli_query($con,$sql);
 	    </div>
 		
 		<!---------------------------- CAROUSEL ---------------------------->
-<div id="demo" class="carousel slide" data-ride="carousel">
+<div id="demo" class="carousel slide" data-ride="carousel" >
 
   		<ul class="carousel-indicators">
     		<li data-target="#demo" data-slide-to="0" class="active"></li>
@@ -75,15 +75,15 @@ $cond = mysqli_query($con,$sql);
     		<li data-target="#demo" data-slide-to="2"></li>
   		</ul>
   
-  		<div class="carousel-inner">
+  		<div class="carousel-inner" >
     		<div class="carousel-item active">
-      			<img src="img/gymmAluno.png" alt="Academia" width="1100" height="500">
+      			<img src="img/gymmAluno.png" alt="Academia" width="1100" height="500" >
     		</div>
     		<div class="carousel-item">
-      			<img src="img/gym2.jpg" alt="Academia" width="1100" height="500">
+      			<img src="img/gym2.jpg" alt="Academia" width="1100" height="500" >
     		</div>
     		<div class="carousel-item">
-      			<img src="img/gym3.jpg" alt="Academia" width="1100" height="500">
+      			<img src="img/gym3.jpg" alt="Academia" width="1100" height="500" >
     		</div>
   		</div>
   
@@ -93,7 +93,7 @@ $cond = mysqli_query($con,$sql);
   		<a class="carousel-control-next" href="#demo" data-slide="next">
     		<span class="carousel-control-next-icon"></span>
   		</a>
-	</div>		
+	</div>	
 
 		<!---------------------------- ANAMESE CADASTRO ---------------------------->
 		<?php
@@ -169,7 +169,7 @@ $cond = mysqli_query($con,$sql);
 		    	</div>
 	  		</div>
 		</div>		  
-		  </div>
+	</div>
 		  
 		<div id="section2" class="container-fluid bg-link" style="padding-top:70px;padding-bottom:0.5px">
 		  <h1>Promoções</h1>

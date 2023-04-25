@@ -12,7 +12,7 @@ if(isset($_SESSION['prof'])|| isset($_SESSION['adm'])){
 
 	<title> SCA </title>
 	<meta charset="utf-8">
-	<link rel="icon" type="imagem/png" href="img/logoNav.png" />
+	<link rel="icon" type="imagem/png" href="img/logo.png" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!------- estilo NAVBAR ------->

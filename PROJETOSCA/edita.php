@@ -131,6 +131,7 @@ tr {
 			<div class="form-group col-md-2">
 			<label> CPF: </label>
             <input type="text" name="cpf" value="<?php echo $cpf; ?>" class="form-control">
+			<input type="hidden" name="oldCpf" value= "<?php echo $cpf; ?>" >
             </div>
 			</div>
 			<br/>
@@ -146,6 +147,7 @@ tr {
 			<div class="form-group col-md-6">
 			<label> Endereço: </label>
             <input type="text" name="endereco" value="<?php echo $endereco; ?>" class="form-control">
+
 			</div>
 			</div>
 			
